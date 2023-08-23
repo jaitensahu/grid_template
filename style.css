@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body {
+    background-color: #ECF2F8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: min(95%, 70rem);
+    grid-auto-columns: 1fr;
+    display: grid;
+    grid-template-areas: 'daniel daniel jonathan kira'
+        'jeanette patrick patrick kira';
+    gap: 22px;
+    box-shadow: 2rem 3.5rem 3rem rgba(72, 85, 106, 0.4);
+}
+
+.cell {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    font-size: 0.815rem;
+    color: white;
+
+}
+
+.daniel {
+    grid-area: daniel;
+    background-color: #7541C8;
+    position: relative;
+}
+.quote-image{
+    position: absolute;
+    width: 104px;
+    height: 102px;
+    left: 72%;
+    top: 0;
+    z-index: 1;
+    background-image: url("https://kabir-sagiii.github.io/CSS_Grid_learn-grid-the-easy-way/images/bg-pattern-quotation.svg");
+}
+.Jonathan {
+    grid-area: jonathan;
+    background-color: #48556A;
+
+}
+
+.Kira {
+    grid-area: kira;
+    background-color: #ffffff;
+    color: black;
+}
+
+.Jeanette {
+    grid-area: jeanette;
+    background-color: #ffffff;
+    color: black;
+
+
+}
+
+.Patrick {
+    grid-area: patrick;
+    background-color: #19212E;
+
+}
+
+.profile {
+    display: flex;
+}
+
+.profile img {
+    height: 1.75rem;
+    border-radius: 50%;
+
+}
+
+.text {
+    margin-left: 15px;
+}
+
+h4 {
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+
+h5 {
+    box-sizing: border-box;
+    color: #A4AAB5;
+}
+
+h2 {
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    font-weight: 500;
+    margin: 22px 0 18px 0;
+}
+
+p {
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    color: #A4AAB5;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+@media screen and (max-width:1199px) {
+    .container {
+        grid-template-areas: 'daniel daniel jonathan'
+            'kira kira kira'
+            'jeanette patrick patrick ';
+    }
+}
+@media screen and (max-width:863px) {
+    .container {
+        grid-template-areas: 'daniel daniel'
+            'jonathan kira'
+            'jeanette kira'
+            ' patrick patrick ';
+    }
+}
+
+@media screen and (max-width:527px) {
+    .container {
+       
+        grid-template-areas: 
+            'daniel'
+            'jonathan'
+            'kira'
+            'jeanette'
+            'patrick';
+    }
+    .quote-image{
+        left: 60%;
+}
+}
